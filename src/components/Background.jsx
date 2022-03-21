@@ -1,6 +1,7 @@
 import { Canvas, useFrame } from '@react-three/fiber'
 import React, { useRef, useState } from 'react'
 import Box from './Box'
+import Text from './Text'
 
 
 export default function Background () {
@@ -15,7 +16,7 @@ export default function Background () {
 		<Canvas style={{position: 'fixed'}}>
 			<ambientLight />
 			<pointLight position={[10, 10, 10]} />
-			<Box position={[-1.2, 0, 0]} />
+			<Text position={[-1.2, 0, 0]} />
 			<Box position={[1.2, 0, 0]} />
 		</Canvas>
 	)
