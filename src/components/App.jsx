@@ -1,26 +1,30 @@
 import { Button, Container, Group, MantineProvider, ScrollArea, Text, Title } from '@mantine/core'
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import  useMousePosition  from '../context/MousePosition'
 
 
 function App() {
+	const viewport = useRef()
 	// const [count, setCount] = useState(0)
-	const mousePosition = useMousePosition()
+	// const mousePosition = useMousePosition()
 	return (
 		<MantineProvider theme={{
-			fontSize: '30rem'
+			headings: {
+				fontFamily: 'Open Sans',
+				sizes: {
+					h1: { fontSize: 80 }
+				}
+			}
 		}}>
-			<ScrollArea style={{height: '50em'}}>
-				<Group className="app" position='center' direction='column' spacing='xl' style={{right: '35em', paddingTop: '5em'}}>
-					<Container size="md">
-						<Title>TEST-1</Title>
-					</Container>
-
-
-
+			<Group className="app" position='center' direction='column' spacing='xs' style={{right: '35em', paddingTop: '5em'}}>
+				<ScrollArea style={{height: '50em'}} viewportRef={viewport}>
+					<Title>TEST-1</Title>
+					<Title>TEST-1</Title>
+					<Title>TEST-1</Title>
+					<Title>TEST-1</Title>
 					{/* <Container size="lg" px="xs">{mousePosition.x} : {mousePosition.y}</Container> */}
-				</Group>
-			</ScrollArea>
+		 </ScrollArea>
+			</Group>
 		</MantineProvider>
 	)
 }
