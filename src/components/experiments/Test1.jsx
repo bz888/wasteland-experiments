@@ -1,18 +1,13 @@
+import React, { useState, useRef, Suspense } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import React, { useRef, useState, Suspense } from 'react'
 
-import Wasteland from './Wasteland'
-import Box from './Box'
-
-
-export default function Background ({ children }) {
-
+export default function Test1 () {
 	return (
 		<Canvas style={{position: 'fixed'}}>
 			<ambientLight />
 			<pointLight position={[10, 10, 10]} />
 			<Suspense fallback={null}>
-				{children}
+				{/* <Wasteland/> */}
 			</Suspense>
 			{/* <Box position={[1.2, 0, 0]} /> */}
 		</Canvas>

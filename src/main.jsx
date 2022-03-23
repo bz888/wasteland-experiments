@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './components/App'
 import { MantineProvider } from '@mantine/core'
-import Background from './components/Background'
+// import Background from './components/Background'
+import { BrowserRouter } from 'react-router-dom'
 
 // const theme = {
 // 	breakpoints: {
@@ -21,8 +22,9 @@ ReactDOM.render(
 			fontFamily: 'Open Sans',
 			fontSizes: { xl: 300 }
 		}}> */}
-		<Background/>
-		<App />
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
 		{/* </MantineProvider> */}
 	</React.StrictMode>,
 	document.getElementById('root')
