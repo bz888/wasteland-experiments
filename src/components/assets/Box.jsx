@@ -1,9 +1,12 @@
+// import { useBox } from '@react-three/cannon'
 import { useFrame } from '@react-three/fiber'
 import React, { useRef, useState } from 'react'
 
 
+
 export default function Box (props) {
 	const ref = useRef()
+	// const [boxRef] = useBox(()=> ({mass: 1}))
 
 	const [hover, setHover] = useState(false)
 	const [click, setClick] = useState(false)

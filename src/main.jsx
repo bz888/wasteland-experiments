@@ -5,7 +5,9 @@ import App from './components/App'
 import { MantineProvider } from '@mantine/core'
 // import Background from './components/Background'
 import { BrowserRouter } from 'react-router-dom'
+// import { createBrowserHistory } from 'history'
 
+// const hist = createBrowserHistory()
 // const theme = {
 // 	breakpoints: {
 // 		xs: 500,
@@ -22,9 +24,9 @@ ReactDOM.render(
 			fontFamily: 'Open Sans',
 			fontSizes: { xl: 300 }
 		}}> */}
-		<BrowserRouter>
-			<App />
-		</BrowserRouter>
+		{/* <BrowserRouter history={hist}> */}
+		<App />
+		{/* </BrowserRouter> */}
 		{/* </MantineProvider> */}
 	</React.StrictMode>,
 	document.getElementById('root')
